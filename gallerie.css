@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  body {
+    min-height: 100vh;
+    min-width: 150vh;
+    display: grid;
+    place-items: center;
+    background: #0F0F0F;
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    overflow: auto;
+    color:#FBFBFB;
+  }
+  
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0F0F0F;
+    color: #FBFBFB;
+    border: 4px solid #fdb347;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+  
+  .gallery img:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    object-fit: contain;
+    height: 300px;
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid rgba(251, 251, 251, 0.6);
+  }
+
+  h1 {
+    border: 3px #0F0F0F solid;
+    
+    background-color: #716969;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    padding:3px auto;
+    transition: 0.8s;
+}
+
+a {
+    text-decoration: none;
+    color: #0F0F0F;
+    transition: 0.8s;
+    background-color: #716969;
+}
