@@ -1,1 +1,2 @@
-voici mon portfolio v.1
+My portfolio v.1
+start with the index.html
