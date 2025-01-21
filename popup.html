@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pop-up Promo</title>
+<style>
+  /* Cache le pop-up par défaut */
+  #popup {
+    display: none; 
+    position: fixed; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    width: 300px; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1000; /* Assure-toi que le pop-up est au-dessus des autres éléments */
+  }
+  
+  /* Style pour le bouton de fermeture */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  /* Fond semi-transparent pour l'arrière-plan */
+  .overlay {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 999; 
+  }
+</style>
+</head>
+<body>
+
+  <button id="showPopup">Voir l'offre</button>
+
+  <div id="popup">
+    <span class="close-button" onclick="hidePopup()">&times;</span> 
+    <h2>Offre spéciale !</h2>
+    <p>Profitez de 20% de réduction sur votre prochaine commande avec le code <b>PROMO20</b> !</p>
+    <button onclick="hidePopup()">Fermer</button> 
+  </div>
+
+  <div class="overlay" onclick="hidePopup()"></div>
+
+  <script>
+    // Fonction pour afficher le pop-up
+    function showPopup() {
+      document.getElementById("popup").style.display = "block";
+      document.querySelector(".overlay").style.display = "block";
+    }
+
+    // Fonction pour masquer le pop-up
+    function hidePopup() {
+      document.getElementById("popup").style.display = "none";
+      document.querySelector(".overlay").style.display = "none";
+    }
+
+    // (Facultatif) Afficher le pop-up après 5 secondes
+    window.onload = function() {
+      setTimeout(showPopup, 5000); 
+    };
+
+    // (Facultatif)  Associer le bouton au pop-up
+    document.getElementById("showPopup").addEventListener("click", showPopup); 
+  </script>
+
+</body>
+</html>

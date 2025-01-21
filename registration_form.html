@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admission</title>
+    <link rel="stylesheet" href="registration_form.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+      </style>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+          <script src="script.js"></script>
+  </head>
+
+
+  <body>
+    <div class="logo">
+      <img src="lune2.2.jpg" alt="logo" ></img>
+        </div>
+    
+    <h1>Inscription</h1>
+    <p>Petit QUIZZ pour mieux se connaitre</p>
+
+
+<!--    <div class="logo">
+  <img src="logo1.png" alt="logo" ></img>
+    </div> -->
+
+
+    <form method="post" action='https://register-demo.freecodecamp.org'>
+      <!--definir ad recup-->
+      <fieldset>
+        <label for="first-name">NOM: <input id="first-name" name="first-name" type="text" required /></label>
+        <label for="last-name">Prénom <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      <!--</fieldset>
+
+      
+      Pour choisir entre  les 2 options
+
+      <fieldset>
+        <legend>Votre sexe (required)</legend>-->
+        <h2>Sexe ??</h2>
+        <label for="femme"><input id="femme" type="radio" name="sexe-type" class="inline"/> Femme</label>
+        <label for="homme"><input id="homme" type="radio" name="sexe-type" class="inline"  /> Homme</label>
+        <label for="non-binaire"><input id="non-binaire" type="radio" name="sexe-type" class="inline" />  Non-binaire</label>
+
+        
+
+      </fieldset>
+
+
+      <fieldset>
+        <label for="profile-picture">Une photo de vous ? <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Si c'est pas indiscret de connaitre votre age  <input id="age" type="number" name="age" min="18" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">X</option>
+            <option value="2">Facebook</option>
+            <option value="3">Instagram</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+
+        <label for="bio">Dites nous en plus :
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="J'aime les longues balades sur la plage..."></textarea>
+        </label>
+      </fieldset>
+      <!--
+      pour les conditions d'utilisations
+      
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>-->
+
+      <input type="submit" value="Envoyer" />
+    </form>
+
+    <button>
+      <a href="projetpf2.html">
+          <p>Back</p>
+      </a>
+  </button>
+  </body>
+</html>
