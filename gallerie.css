@@ -23,7 +23,7 @@
     padding: 32px;
     background-color: #0F0F0F;
     color: #716969;
-    border: 4px solid #bcabae;
+    border: 4px solid #0F0F0F;
   }
   
   .gallery {
@@ -62,9 +62,9 @@
   }
 
   h1 {
-    border: 3px #0F0F0F solid;
+    border: 2px #0F0F0F solid;
     
-    background-color: #716969;
+    background-color: #0F0F0F;
     margin-left: 1vw;
     margin-right: 1vw;
     width: 100%;
