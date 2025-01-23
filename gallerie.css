@@ -14,7 +14,7 @@
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
     overflow: auto;
-    color:#FBFBFB;
+    color:#bcabae;
   }
   
   .header {
@@ -22,8 +22,8 @@
     text-transform: uppercase;
     padding: 32px;
     background-color: #0F0F0F;
-    color: #FBFBFB;
-    border: 4px solid #fdb347;
+    color: #716969;
+    border: 4px solid #bcabae;
   }
   
   .gallery {
@@ -79,4 +79,22 @@ a {
     color: #0F0F0F;
     transition: 0.8s;
     background-color: #716969;
+}
+
+#backButton {
+  position: fixed; /* Fixe le bouton en bas de la fenêtre */
+  bottom: 20px; /* Distance par rapport au bas de la fenêtre */
+  left: 50%; /* Centre le bouton horizontalement */
+  transform: translateX(-50%); /* Centre le bouton en utilisant une transformation */
+  padding: 10px 20px; /* Ajoute du padding pour agrandir le bouton */
+  background-color: #716969; /* Couleur de fond du bouton */
+  color: #0f0f0f; /* Couleur du texte */
+  border: none; /* Supprime les bordures */
+  border-radius: 5px; /* Ajoute des coins arrondis */
+  cursor: pointer; /* Change le curseur au survol */
+  text-align: center; /* Centre le texte à l'intérieur du bouton */
+}
+
+#backButton:hover {
+  background-color: #bcabae; /* Change la couleur de fond au survol */
 }
