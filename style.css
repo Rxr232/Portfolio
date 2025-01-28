@@ -1,3 +1,8 @@
+@media (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 * {
