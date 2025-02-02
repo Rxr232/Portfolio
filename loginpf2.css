@@ -1,14 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   min-height: 100vh;
-  min-width: 150vh;
+  min-width: 100vw;
   display: grid;
   place-items: center;
   background: #0F0F0F;
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   overflow: hidden;
-  color:#FBFBFB;
+  color: #FBFBFB;
 }
+
 .form {
   --background: #716969;
   --input-focus: #2d8cf0;
@@ -71,7 +80,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5px;
-    /* margin: 50px auto 0 auto; */
   padding: auto 15px 15px auto;
   width: 250px;
   height: 40px;
@@ -129,6 +137,7 @@ body {
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .social-icons {
   bottom: 10px;
   min-height: auto;
@@ -144,34 +153,111 @@ body {
 p.welcome {
   font-size: 30px;
 }
+
 p.social-bar {
   color: deepskyblue;
   font-size: 15px;
   margin-right: 1rem;
-  margin-bottom: 10px ;
+  margin-bottom: 10px;
 }
 
 p.social-bar::first-letter {
   font-size: 25px;
   color: rgb(240, 75, 15);
-  
 }
 
 .fa-instagram, .fa-square-x-twitter, .fa-btc, .fa-paypal {
   color: #2D2E2E;
 }
 
-
 div.aside {
   position: fixed;
   width: 50px;
-  height:50px;
-  left:10px;
+  height: 50px;
+  left: 10px;
   max-width: 60px;
   min-height: 60px;
-  top:80px;
-  display:block;
+  top: 80px;
+  display: block;
 }
+
+a {
+  text-decoration: none;
+  color: #FBFBFB;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #2D2E2E;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .form {
+    padding: 40px;
+  }
+  .form > p {
+    font-size: 18px;
+  }
+  .form > p > span {
+    font-size: 15px;
+  }
+  .oauthButton, .form > input {
+    width: 220px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form {
+    padding: 30px;
+  }
+  .form > p {
+    font-size: 16px;
+  }
+  .form > p > span {
+    font-size: 14px;
+  }
+  .oauthButton, .form > input {
+    width: 200px;
+    height: 30px;
+    font-size: 13px;
+  }
+  .social-icons {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 20px;
+  }
+  .form > p {
+    font-size: 14px;
+  }
+  .form > p > span {
+    font-size: 12px;
+  }
+  .oauthButton, .form > input {
+    width: 180px;
+    height: 25px;
+    font-size: 12px;
+  }
+  .social-icons {
+    gap: 1px;
+  }
+  p.welcome {
+    font-size: 24px;
+  }
+  p.social-bar {
+    font-size: 13px;
+  }
+  p.social-bar::first-letter {
+    font-size: 20px;
+  }
+}
+
 
 a {
   text-decoration: none;
