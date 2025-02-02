@@ -1,100 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    min-height: 100vh;
-    min-width: 150vh;
-    display: grid;
-    place-items: center;
-    background: #0F0F0F;
-    font-family: "Ubuntu Mono", monospace;
-    font-weight: 400;
-    overflow: auto;
-    color:#bcabae;
-  }
-  
-  .header {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 32px;
-    background-color: #0F0F0F;
-    color: #716969;
-    border: 4px solid #0F0F0F;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
-  }
-  
-  .gallery img {
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
-  .gallery::after {
-    content: "";
-    width: 350px;
-  }
-  
-  .gallery img:hover {
-    transition: 0.5s;
-    transform: scale(1.1);
-    object-fit: contain;
-    height: 300px;
-    width: 100%;
-    max-width: 350px;
-    border: 2px solid rgba(251, 251, 251, 0.6);
-  }
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: grid;
+  place-items: center;
+  background: #0F0F0F;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  overflow: auto;
+  color: #FBFBFB;
+}
 
-  h1 {
-    border: 2px #0F0F0F solid;
-    
-    background-color: #0F0F0F;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    width: 100%;
-    height: 50px;
-    border-radius: 12px;
-    padding:3px auto;
-    transition: 0.8s;
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0F0F0F;
+  color: #FBFBFB;
+  border: 4px solid #fdb347;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery video {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+.gallery video:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+  border: 2px solid rgba(251, 251, 251, 0.6);
+}
+
+h1 {
+  border: 3px #0F0F0F solid;
+  background-color: #716969;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  padding: 3px auto;
+  transition: 0.8s;
 }
 
 a {
-    text-decoration: none;
-    color: #0F0F0F;
-    transition: 0.8s;
-    background-color: #716969;
+  text-decoration: none;
+  color: #0F0F0F;
+  transition: 0.8s;
+  background-color: #716969;
 }
 
-#backButton {
-  position: fixed; /* Fixe le bouton en bas de la fenêtre */
-  bottom: 20px; /* Distance par rapport au bas de la fenêtre */
-  left: 50%; /* Centre le bouton horizontalement */
-  transform: translateX(-50%); /* Centre le bouton en utilisant une transformation */
-  padding: 10px 20px; /* Ajoute du padding pour agrandir le bouton */
-  background-color: #716969; /* Couleur de fond du bouton */
-  color: #0f0f0f; /* Couleur du texte */
-  border: none; /* Supprime les bordures */
-  border-radius: 5px; /* Ajoute des coins arrondis */
-  cursor: pointer; /* Change le curseur au survol */
-  text-align: center; /* Centre le texte à l'intérieur du bouton */
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .gallery video {
+    max-width: 300px;
+  }
 }
 
-#backButton:hover {
-  background-color: #bcabae; /* Change la couleur de fond au survol */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gallery video {
+    max-width: 45%;
+    margin-bottom: 10px;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery video {
+    max-width: 90%;
+  }
+  .header {
+    font-size: 1.2rem;
+  }
 }
