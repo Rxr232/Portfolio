@@ -76,10 +76,24 @@ a {
   background-color: #716969;
 }
 
+/* Styles for responsive images */
+img {
+  max-width: 45%;
+  width: 300px;
+  height: auto;
+  display: block;
+  justify-items: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
   .gallery video {
     max-width: 300px;
+  }
+  img {
+    max-width: 45%;
   }
 }
 
@@ -90,19 +104,26 @@ a {
     justify-content: center;
   }
   .gallery video {
-    max-width: 45%;
+    max-width: 100%;
     margin-bottom: 10px;
   }
   .header {
     font-size: 1.5rem;
   }
+  img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 480px) {
   .gallery video {
-    max-width: 90%;
+    max-width: 100%;
   }
   .header {
     font-size: 1.2rem;
+  }
+  img {
+    max-width: 100%;
   }
 }
